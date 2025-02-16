@@ -26,20 +26,25 @@
 /////////////  server useing middleware express
 
 const express = require("express");
-const http = require("http");
+
+// const http = require("http");
 
 const app = express()
 
 app.get('/',(req,res) =>{
-    return res.send("hello from home page")
+    res.send("hello from home page")
 })
 
 app.get('/about',(req,res) =>{
-    return res.send("hello from about page")
+    res.send("hello from about page")
 })
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-server.listen(3000,()=>{
+// server.listen(3000,()=>{
+//     console.log(`server is running on port 3000`)
+// })
+
+app.listen(3000,()=>{
     console.log(`server is running on port 3000`)
 })
